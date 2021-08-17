@@ -6,32 +6,44 @@
     text-decoration: none;
 }
 
-a {color: #FFF;}
-
-img{max-width: 100%;}
-
-p {font-size: 1.2em; line-height: 1.4em; color: #141A28;}
-
-h2 {color: #141A28;}
-
-.container {
-    width: 960px;
-    margin: 0 auto;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 html, body {
     width: 100%;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     background-color: #E9F3FE;
+    overflow-x: hidden;
+}
+
+a  {color: #FFF; }
+
+img { max-width: 100%; }
+
+p {font-size: 1.2em; line-height: 1.4em; color: #141A28;}
+
+h1 { 
+    text-transform: uppercase; 
+    text-align: center; 
+    font-size: 2em;
+    line-height: 1em;
+    margin: 40px auto;
+}
+
+h2 { color: #141A28; }
+
+section {padding: 20px; margin: 20px;}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header {
@@ -67,8 +79,10 @@ main {width: 100%;}
 
 .super-card {
     width: 100%;
+    height: 70vh;
     display: flex;
     margin-top: 20px;
+    align-items: center;
 }
 
 .super-card-img, 
@@ -87,13 +101,14 @@ main {width: 100%;}
 
 .super-card-text p + p {margin-top: 1em;}
 
+.card-group { margin-bottom: 40px; }
 
 .card {
     max-width: 350px;
     min-height: 500px;
     border-radius: 3px;
-    margin: 1em;
-    background-color: #FFF;
+    margin: 20px;
+    background-color: #141A28;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, .15);
     transition: all .3s ease-in-out;
     display: flex;
@@ -115,8 +130,8 @@ main {width: 100%;}
 
 .card-body { padding: 1em; }
 .card-body p {
-    color: #343A40;
-    line-height: 1.4em;
+    color: #E9F3FE;
+    text-align: center;
 }
 
 .card-body p + p { margin-top: .5em;}
@@ -148,7 +163,10 @@ main {width: 100%;}
     opacity: .75;
 }
 
-.sub-title {margin: 20px auto;}
+.portfolio {background-color: #FFF; width: 100%;}
+
+
+.contact {flex-direction: column;}
 
 .li-ornament { margin: 10px 0; }
 
@@ -164,5 +182,21 @@ main {width: 100%;}
 .contact-link {color: #141A28;}
 
 .map {
-    margin: 20px 0;
+    margin: 20px 0 40px 0;
+}
+
+footer { background-color: #141A28; }
+
+.text-white { color: #E9F3FE; }
+
+.footer small { text-align: center; padding: 40px;  margin: 0 auto;}
+
+.btn-up {
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #141A28;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, .15);
 }
