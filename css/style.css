@@ -11,23 +11,130 @@ body, html {
     background-color: #EEE;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 16px;
+}
 
+img {max-width: 100%;}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1em;
+    margin: 15px auto 0 auto;
+}
+
+
+span {font-size: 1.5em;}
+
+a {text-decoration: none; color: #000}
+
+p {font-size: 1.25em; line-height: 1.4em;}
+
+.container {
+    width: 1300px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: #24292e;
+    
+    display: flex;
+}
+
+header div.container {justify-content: space-between !important; align-items: center}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    flex: 0 1 90px;
+}
+
+nav {flex: 0 1 700px;}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {width: 25%; margin: 10px auto;}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #CCC;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #CCC;
+    color: #24292e;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #EEE;
+}
+
+article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.lista {
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-img{max-width: 100% !important;}
-
-h1 {
-    font-weight: bold;
-    font-size: 2.5em;
-    line-height: 1em;
-    margin: 15px auto;
+.item {
+    flex: 0 1 300px;
+    height: 300px;
+    margin: 15px;
+    background-color: #FFF;
+    box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, .1);
+    border-radius: 5px;
 }
 
-h1::after {
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #24292e;
+    color: #CCC;
+}
+
+
+/*Sobre*/
+
+.sobre {
+    width: 70%;
+    padding: 15px;
+    background-color: #FFF;
+    margin: 15px auto;
+    border-radius: 5px;
+    box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, .1);
+}
+
+h1.nome::after {
     content: "";
     display: block;
     width: 100%;
@@ -36,87 +143,68 @@ h1::after {
     margin: 2px 0 15px 0;
 }
 
-span {font-size: 1.5em;}
-
-a {text-decoration: none; color: #000}
-
-p {
-    font-size: 1.25em;
-    line-height: 1.4em;
-}
-
-p + p {margin: 15px 0;}
-
-.container {
-    width: 1100px;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    background-color: #FFF;
-    box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, .1);
-    border-radius: 5px;
-}
-
-main {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-article {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-section.foto-social {
-    flex: 1 1 100px;
-}
-
-section.texto {
-    flex: 1 1 400px;
-}
-
-section + section {margin-left: 15px;}
-
 .foto {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     margin: 0 auto;
     border-radius: 50%;
 }
 
 .foto img {
-    width: 300px;
-    height: 300px;
     margin: 0 auto;
     border-radius: 50%;
 }
 
-ul.social {
+p.paragrafo + p.paragrafo {margin: 15px 0;}
+
+
+/*Contato*/
+.contato {
+    width: 70%;
+    padding: 15px;
+    background-color: #FFF;
+    margin: 15px auto;
+    border-radius: 5px;
+    box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, .1);
+}
+
+.contato ul {
     width: 100%;
-    height: auto;
-    margin-top: 15px;
+    margin: 30px 15px 15px 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-ul.social li {
-    flex: 1 1 35px;
+.contato ul li {
+    flex: 0 1 50px;
     margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
 }
 
-ul.social li a {
-    text-align: center;
+.contato ul li a {
     display: block;
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
     transition: all .5s ease-in-out;
 }
 
-ul.social li a:hover {opacity: .5;}
+.contato ul li a:hover {
+    background-color: #24292e;
+    color: #CCC;
+}
+
+
+/*Media Screen*/
+@media screen and (max-width: 600px) {
+    body, html {font-size: 12px}
+
+    .foto {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+}
